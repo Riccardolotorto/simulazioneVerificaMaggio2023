@@ -15,7 +15,8 @@ def home():
 def categoria():
     categorie = list(dff["category_name"])
     categorie.sort()
-    return render_template('categoria.html', lista = categorie)
+    id = list(dff["category_id"])
+    return render_template('categoria2.html', lista = categorie, lista2 = id)
 
 @app.route('/risultatoCategoria', methods = ["GET"])
 def risultatocategoria():
